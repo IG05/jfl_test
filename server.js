@@ -4,7 +4,7 @@ const app = express();
 app.disable('x-powered-by');
 
 app.get('/', (req, res) => {
-  res.send('Hello from Node.js App (Blue-Green Deployment)');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.use((req, res) => {
