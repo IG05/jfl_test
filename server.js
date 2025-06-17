@@ -4,6 +4,10 @@ const app = express();
 
 app.disable('x-powered-by');
 
+app.get('/health', (req, res) => {
+  res.send('Health check passed intentionally');
+});
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
